@@ -14,12 +14,13 @@ while ($p) {
 	} else {
 		push @a, $p;
 	}
-	if ($c > 6) {
+	if ($c % 8 == 7) {
 		print $fh chr($t);
 		foreach $i (@a) {
 			print $fh $i;
 		}
 		@a = ();
+		$t = 0;
 	}
 	$c++;
 	$p = shift;
