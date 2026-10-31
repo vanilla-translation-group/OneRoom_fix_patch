@@ -15,6 +15,20 @@ wchar_t *cwd;
 
 hashset_t list = NULL;
 
+wchar_t *myfgetws(wchar_t *str, int n, FILE *fp) {
+    wchar_t c;
+    for (int i = 0; i < n; i++) {
+        if (fread(&c, sizeof(wchar_t), 1, fp) != 1) {
+            return NULL;
+        }
+        *str++ = c;
+        if (c == L'\n') {
+            break;
+        }
+    }
+    return str;
+}
+
 typedef HMODULE (WINAPI *LOADLIBRARYW)(LPCWSTR);
 
 LOADLIBRARYW fpLoadLibraryW = NULL;
@@ -94,7 +108,7 @@ int Init() {
     while ((flag = fgetc(fp)) != EOF) {
         for (int i = 0; i < 8; i++) {
             if (flag & 1) {
-                NOTNULL(fgetws(file, sizeof(file), fp));
+                NOTNULL(myfgetws(file, sizeof(file) / 2, fp));
             }
             else {
                 char tfile[256];

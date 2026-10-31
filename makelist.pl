@@ -3,13 +3,14 @@
 use Encode;
 
 open(my $fh, ">", "filelist.dat") or die "Failed to open file";
+binmode $fh;
 
 my $p = shift, $c = 0, $t = 0, @a = ();
 
 while ($p) {
 	$p .= "\n";
 	if ($p =~ /[^\x0-\x7f]/) {
-		$t += 1 << $c;
+		$t += 1 << ($c % 8);
 		push @a, encode("UCS-2LE", decode("UTF-8", $p));	
 	} else {
 		push @a, $p;

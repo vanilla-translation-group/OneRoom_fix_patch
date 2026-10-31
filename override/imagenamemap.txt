@@ -1,0 +1,39 @@
+﻿#画像名条件マッピング定義
+#画像名  	変換後指定       	条件
+#event001	event01SP	sf.clear
+#eyecatch	eyecatch1	f.eyeCatcha==1
+#eyecatch	eyecatch2	f.eyeCatcha==2
+
+credit	credit_EN	CurrentLanguageTag=="en"
+credit	credit_EN	CurrentLanguageTag=="tw"
+credit	credit_EN	CurrentLanguageTag=="cn"
+
+ep11_op	ep11_op_en	CurrentLanguageTag=="en"
+ep11_op	ep11_op_tw	CurrentLanguageTag=="tw"
+ep11_op	ep11_op_ch	CurrentLanguageTag=="cn"
+
+ep11_ed	ep11_ed_ch	CurrentLanguageTag=="cn"
+
+結衣１７	結衣１７_en	CurrentLanguageTag=="en"
+結衣１７	結衣１７_tw	CurrentLanguageTag=="tw"
+結衣１７	結衣１７_ch	CurrentLanguageTag=="cn"
+
+結衣１８	結衣１８_en	CurrentLanguageTag=="en"
+結衣１８	結衣１８_tw	CurrentLanguageTag=="tw"
+結衣１８	結衣１８_ch	CurrentLanguageTag=="cn"
+
+結衣２４	結衣２４_en	CurrentLanguageTag=="en"
+結衣２４	結衣２４_tw	CurrentLanguageTag=="tw"
+結衣２４	結衣２４_ch	CurrentLanguageTag=="cn"
+
+結衣２５	結衣２５_en	CurrentLanguageTag=="en"
+結衣２５	結衣２５_tw	CurrentLanguageTag=="tw"
+結衣２５	結衣２５_ch	CurrentLanguageTag=="cn"
+
+結衣２８	結衣２８_en	CurrentLanguageTag=="en"
+結衣２８	結衣２８_tw	CurrentLanguageTag=="tw"
+結衣２８	結衣２８_ch	CurrentLanguageTag=="cn"
+
+結衣７４	結衣７４_en	CurrentLanguageTag=="en"
+結衣７４	結衣７４_tw	CurrentLanguageTag=="tw"
+結衣７４	結衣７４_ch	CurrentLanguageTag=="cn"
